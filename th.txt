@@ -1,0 +1,24 @@
+npm i react-router-dom
+
+ecom:
+
+user:
+admin:
+common:login signup,heropage..
+
+src:
+ router
+ pages
+ components:
+   user
+   admin
+   common
+
+
+old routing:
+main.jsx ---><BrowserROuter>
+app.jsx --> <Routes>
+<Routes path = "" element ={}>
+
+
+     
