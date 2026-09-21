@@ -12,6 +12,12 @@ export const Login = () => {
     //we are assuming the login person is user role or login person is admin role
     ///it is user we will redirect him to userNavbar
     navigate("/user")
+    //we will call api here and api will return response as
+    //{token:"skasjiasjsajpiaskas",role:"admin"}
+    //store token and role both in localSotrage
+    localStorage.setItem("token","aksjnasashashjassihsabashasash") ////it will come from api
+    localStorage.setItem("role","user") //it will come from api
+
   }
   return (
     <div>
