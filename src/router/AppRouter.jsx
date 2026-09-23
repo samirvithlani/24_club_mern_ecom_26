@@ -21,7 +21,7 @@ const router = createBrowserRouter([
     {
         path:"/user",
         element:
-        <ProtectedRoutes>
+        <ProtectedRoutes role="user">
             <UserNavbar/>,
         </ProtectedRoutes>,
         children:[
@@ -39,7 +39,7 @@ const router = createBrowserRouter([
     {
         path:"/admin",
         element:
-        <ProtectedRoutes>
+        <ProtectedRoutes role="admin">
         <AdminNavbar/>,
         </ProtectedRoutes>,
         children:[
