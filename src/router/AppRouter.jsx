@@ -7,6 +7,7 @@ import { UserDashboard } from "../components/user/UserDashboard"
 import { AdminDashboard } from "../components/admin/AdminDashboard"
 import { AddProduct } from "../components/admin/AddProduct"
 import { UserCart } from "../components/user/UserCart"
+import ProtectedRoutes from "./ProtectedRoutes"
 
 const router = createBrowserRouter([
     {
@@ -19,7 +20,10 @@ const router = createBrowserRouter([
     },
     {
         path:"/user",
-        element:<UserNavbar/>,
+        element:
+        <ProtectedRoutes>
+            <UserNavbar/>,
+        </ProtectedRoutes>,
         children:[
             {
                 //dont give /
@@ -34,7 +38,10 @@ const router = createBrowserRouter([
     },
     {
         path:"/admin",
-        element:<AdminNavbar/>,
+        element:
+        <ProtectedRoutes>
+        <AdminNavbar/>,
+        </ProtectedRoutes>,
         children:[
             {
                 path:"dashboard",
